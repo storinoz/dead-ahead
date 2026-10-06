@@ -20,6 +20,7 @@ Após a publicação pelo GitHub Pages, o endereço será:
 - Emblema do Team de cada skin, com balão dos bônus de 2, 3 e 5 unidades, acessível por mouse, teclado e toque.
 - Busca por nome do personagem ou de qualquer skin, sempre abrindo a unidade principal.
 - Interface integralmente em inglês, com classe, vantagens, balões explicativos e resumo de cada unidade.
+- Perfil compacto à esquerda e informações da unidade/build à direita; itens em grade 2×2 (Cup, Watch / Knife, Book) e critérios em largura total. Layout empilhado no celular.
 - Alternância entre os modos claro e escuro, com a preferência mantida nas próximas visitas.
 - Busca rápida, navegação entre personagens e links compartilháveis.
 - Planilha Excel original disponível pelo botão `Export .XLSX`.

@@ -106,6 +106,23 @@ function getShortPerkDescription(info) {
   return firstSentence || info || "Innate unit advantage.";
 }
 
+function hidePerkTooltips() {
+  document.querySelectorAll('.perk-tooltip.visible').forEach((tooltip) => tooltip.classList.remove('visible'));
+}
+
+function showPerkTooltip(button, tooltip) {
+  hidePerkTooltips();
+  const anchor = button.getBoundingClientRect();
+  const bounds = tooltip.getBoundingClientRect();
+  const margin = 14;
+  const left = Math.max(margin, Math.min(anchor.left + (anchor.width - bounds.width) / 2, window.innerWidth - bounds.width - margin));
+  const above = anchor.top - bounds.height - 11;
+  const top = above >= margin ? above : Math.min(anchor.bottom + 11, window.innerHeight - bounds.height - margin);
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${Math.max(margin, top)}px`;
+  tooltip.classList.add('visible');
+}
+
 function hideTeamTooltip() {
   clearTimeout(showTeamTooltip.hideTimer);
   elements.teamTooltip.hidden = true;
@@ -221,6 +238,7 @@ function renderCharacterHero(character) {
 }
 
 function renderUnitProfile(character) {
+  document.querySelectorAll('.perk-tooltip').forEach((tooltip) => tooltip.remove());
   const profile = state.unitProfiles?.[character.name];
   if (!profile) return;
   elements.classIcon.src = profile.classIcon;
@@ -239,6 +257,16 @@ function renderUnitProfile(character) {
       </button>
     `).join("")
     : '<span class="no-perks">No innate perks</span>';
+  elements.perkList.querySelectorAll('.perk-badge').forEach((button) => {
+    const tooltip = button.querySelector('.perk-tooltip');
+    // Keep tooltips outside the clipped profile card and within the viewport.
+    document.body.append(tooltip);
+    button.addEventListener('mouseenter', () => showPerkTooltip(button, tooltip));
+    button.addEventListener('focus', () => showPerkTooltip(button, tooltip));
+    button.addEventListener('click', () => showPerkTooltip(button, tooltip));
+    button.addEventListener('mouseleave', hidePerkTooltips);
+    button.addEventListener('blur', hidePerkTooltips);
+  });
 }
 
 function selectCharacter(index, requestedBuild = 0, focusHeading = false, requestedSkin = 0) {
@@ -322,11 +350,17 @@ function connectEvents() {
   elements.teamTooltip.addEventListener("mouseleave", scheduleTeamTooltipHide);
   window.addEventListener("resize", hideTeamTooltip);
   window.addEventListener("scroll", hideTeamTooltip, { passive: true });
+  window.addEventListener("resize", hidePerkTooltips);
+  window.addEventListener("scroll", hidePerkTooltips, { passive: true });
   document.addEventListener("pointerdown", (event) => {
     if (!elements.teamBadge.contains(event.target) && !elements.teamTooltip.contains(event.target)) hideTeamTooltip();
+    if (!event.target.closest('.perk-badge')) hidePerkTooltips();
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") hideTeamTooltip();
+    if (event.key === "Escape") {
+      hideTeamTooltip();
+      hidePerkTooltips();
+    }
   });
   elements.themeToggle.addEventListener("click", () => {
     applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");

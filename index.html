@@ -18,7 +18,7 @@
         document.documentElement.dataset.theme = "dark";
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -68,7 +68,9 @@
         </div>
 
         <div id="appContent" class="app-content" hidden>
+          <div class="overview-layout">
           <section class="profile-panel" aria-labelledby="characterName">
+            <div class="profile-hero">
             <div class="portrait-stage">
               <div class="portrait-halo" aria-hidden="true"></div>
               <div class="skin-selector" id="skinSelector" aria-label="Character skins"></div>
@@ -88,7 +90,10 @@
                 </div>
                 <div class="perk-list" id="perkList" aria-label="Unit perks"></div>
               </div>
+            </div>
+            </div>
 
+            <div class="profile-controls">
               <div class="profile-actions">
                 <label class="select-field" for="buildSelect">
                   <span>Build / set</span>
@@ -106,12 +111,28 @@
             </div>
           </section>
 
+          <div class="guidance-column">
+            <section class="unit-about-panel" aria-labelledby="unitAboutTitle">
+              <h3 id="unitAboutTitle">About this unit</h3>
+              <p class="unit-tagline" id="unitTagline"></p>
+              <p id="unitSummary"></p>
+            </section>
+
+            <aside class="observation" aria-labelledby="observationTitle">
+              <span class="observation-icon" aria-hidden="true">!</span>
+              <div>
+                <h3 id="observationTitle">How to use this build</h3>
+                <p id="observationText"></p>
+              </div>
+            </aside>
+          </div>
+          </div>
+
           <section class="build-section" aria-label="Recommended configuration">
             <div class="section-heading">
               <p class="eyebrow">Recommended configuration</p>
             </div>
 
-            <div class="build-layout">
               <div class="item-grid" id="itemGrid">
                 <article class="item-card" data-item="cup">
                   <div class="item-card-heading">
@@ -123,20 +144,20 @@
                     <div><dt>Secondary</dt><dd data-field="secondary"></dd></div>
                   </dl>
                 </article>
-                <article class="item-card" data-item="knife">
+                <article class="item-card" data-item="watch">
                   <div class="item-card-heading">
                     <span class="item-image-frame"><img class="item-image" data-item-image src="" alt="" width="64" height="64"></span>
-                    <div><small data-field="itemName"></small><h3>Knife</h3></div>
+                    <div><small data-field="itemName"></small><h3>Watch</h3></div>
                   </div>
                   <dl>
                     <div class="primary-stat"><dt>Primary</dt><dd data-field="primary"></dd></div>
                     <div><dt>Secondary</dt><dd data-field="secondary"></dd></div>
                   </dl>
                 </article>
-                <article class="item-card" data-item="watch">
+                <article class="item-card" data-item="knife">
                   <div class="item-card-heading">
                     <span class="item-image-frame"><img class="item-image" data-item-image src="" alt="" width="64" height="64"></span>
-                    <div><small data-field="itemName"></small><h3>Watch</h3></div>
+                    <div><small data-field="itemName"></small><h3>Knife</h3></div>
                   </div>
                   <dl>
                     <div class="primary-stat"><dt>Primary</dt><dd data-field="primary"></dd></div>
@@ -154,31 +175,14 @@
                   </dl>
                 </article>
               </div>
+          </section>
 
-              <div class="guidance-column">
-                <section class="unit-about-panel" aria-labelledby="unitAboutTitle">
-                  <h3 id="unitAboutTitle">About this unit</h3>
-                  <p class="unit-tagline" id="unitTagline"></p>
-                  <p id="unitSummary"></p>
-                </section>
-
-                <aside class="observation" aria-labelledby="observationTitle">
-                  <span class="observation-icon" aria-hidden="true">!</span>
-                  <div>
-                    <h3 id="observationTitle">How to use this build</h3>
-                    <p id="observationText"></p>
-                  </div>
-                </aside>
-
-                <section class="methodology-panel" aria-labelledby="methodologyTitle">
+          <section class="methodology-panel" aria-labelledby="methodologyTitle">
                   <h3 id="methodologyTitle">Recommendation criteria and scope</h3>
                   <div class="methodology-content">
                     <p id="criterionText"></p>
                     <p id="scopeText"></p>
                   </div>
-                </section>
-              </div>
-            </div>
           </section>
 
           <nav class="character-navigation" aria-label="Navigate between characters">
@@ -210,6 +214,6 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <div class="team-tooltip" id="teamTooltip" role="tooltip" hidden></div>
-    <script src="app.js?v=8" defer></script>
+    <script src="app.js?v=9" defer></script>
   </body>
 </html>
