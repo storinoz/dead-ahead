@@ -1,0 +1,472 @@
+{
+  "source": "https://deadahead.wiki.gg/wiki/Team_Powers",
+  "verifiedAt": "2026-10-06",
+  "teams": {
+    "emergency": {
+      "name": "Emergency",
+      "source": "https://deadahead.wiki.gg/wiki/Emergency_(Team)",
+      "image": "assets/teams/emergency.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Emergency_logo.png?f1f9cc",
+      "bonuses": {
+        "2": "All allied units gain 15% maximum health.",
+        "3": "With 3 different Emergency units on the field, allies inside a Medkit's area deal 50% more melee and ranged damage. Explosions and afterburn are excluded.",
+        "5": "After 6 different Emergency unit instances receive healing, an extra Emergency unit from your deck joins the battle. Each instance counts once."
+      }
+    },
+    "northerners": {
+      "name": "Northerners",
+      "source": "https://deadahead.wiki.gg/wiki/Northerners_(Team)",
+      "image": "assets/teams/northerners.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Northerners_logo.png?e9b36c",
+      "bonuses": {
+        "2": "After a Northerner kills an enemy, their next attack is a guaranteed critical hit.",
+        "3": "With 3 different Northerners on the field, newly deployed Northerners always land a critical hit with their first attack.",
+        "5": "Northerners gain 50 percentage points of critical damage."
+      }
+    },
+    "college": {
+      "name": "College",
+      "source": "https://deadahead.wiki.gg/wiki/College_(Team)",
+      "image": "assets/teams/college.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/College_logo.png?d00f4b",
+      "bonuses": {
+        "2": "Each College unit gains 10% critical damage per 90 points of their own charisma.",
+        "3": "With 3 different College units on the field, College units gain 80% charisma.",
+        "5": "College kills summon a random College unit from your deck: initially after 3 kills with +7% damage. Each summon adds 3 required kills and another 7% damage."
+      }
+    },
+    "military": {
+      "name": "Military",
+      "source": "https://deadahead.wiki.gg/wiki/Military_(Team)",
+      "image": "assets/teams/military.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Military_logo.png?5fcffe",
+      "bonuses": {
+        "2": "Military units below 10% health have a 30% chance to avoid incoming damage.",
+        "3": "After 3 different Military units reach the field, every 2 Military deaths can summon SpecOps with a 50% chance.",
+        "5": "Enemies ignore Military units until those units attempt an attack. Opposing Military units can still target them."
+      }
+    },
+    "patriots": {
+      "name": "Patriots",
+      "source": "https://deadahead.wiki.gg/wiki/Patriots_(Team)",
+      "image": "assets/teams/patriots.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Patriots_logo.png?6d5add",
+      "bonuses": {
+        "2": "Patriot attacks have a 15% chance to ignite enemies.",
+        "3": "With 3 different Patriots on the field, fire and afterburn damage from human units and support items is doubled.",
+        "5": "Burning enemies deal 10% less damage."
+      }
+    },
+    "tmf": {
+      "name": "TMF",
+      "source": "https://deadahead.wiki.gg/wiki/TMF_(Team)",
+      "image": "assets/teams/tmf.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/TMF_logo.png?1449bc",
+      "bonuses": {
+        "2": "TMF units have a 50% chance to avoid each instance of explosion damage.",
+        "3": "Deploying a third different TMF unit summons one extra random TMF unit from your deck. Activates once per battle.",
+        "5": "Deploying a TMF unit has a 50% chance to reduce a random deck unit's cost by 5, down to zero. Can trigger 10 times per battle."
+      }
+    },
+    "builders": {
+      "name": "Builders",
+      "source": "https://deadahead.wiki.gg/wiki/Builders_(Team)",
+      "image": "assets/teams/builders.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Builders_logo.png?7e4f69",
+      "bonuses": {
+        "2": "Start with a Red Barrel and Nitrogen on the field. Skirmish and wave-based modes use two Red Barrels instead.",
+        "3": "Deploying a third different Builder summons one extra random Builder from your deck. Activates once per battle.",
+        "5": "Builders gain 5% damage per Empty Barrel or Red Barrel currently on the field."
+      }
+    },
+    "if": {
+      "name": "Internal Forces (IF)",
+      "source": "https://deadahead.wiki.gg/wiki/Internal_Forces_(Team)",
+      "image": "assets/teams/if.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Internal_Forces_logo.png?e9d763",
+      "bonuses": {
+        "2": "Enemies within a Medkit's area move 50% slower and take extra damage equal to its healing percentage.",
+        "3": "With 3 different IF units on the field, a Medkit appears at a random location every 20 seconds. Its level matches your equipped Medkit; otherwise it is level 0.",
+        "5": "Medkits last 50% longer, providing 12 healing pulses instead of 8."
+      }
+    },
+    "mechanic": {
+      "name": "Mechanic",
+      "source": "https://deadahead.wiki.gg/wiki/Mechanic_(Team)",
+      "image": "assets/teams/mechanic.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Mechanic_logo.png?d5b204",
+      "bonuses": {
+        "2": "Each deployed Mechanic repairs the bus by 5% of its maximum health.",
+        "3": "With 3 different Mechanics on the field, deploying a Mechanic has a 25% chance to create a Turret; Welder has a 50% chance. Equip a Turret to use its upgraded level.",
+        "5": "Turrets take half as much self-damage from overheating."
+      }
+    },
+    "jailers": {
+      "name": "Jailers",
+      "source": "https://deadahead.wiki.gg/wiki/Jailers_(Team)",
+      "image": "assets/teams/jailers.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Jailers_logo.png?7905f2",
+      "bonuses": {
+        "2": "Support items require 30% less preparation time.",
+        "3": "With 3 different Jailers on the field, their critical hits have a 25% chance to stun enemies.",
+        "5": "All human units and support items require 30% less preparation time."
+      }
+    },
+    "psychos": {
+      "name": "Psychos",
+      "source": "https://deadahead.wiki.gg/wiki/Psychos_(Team)",
+      "image": "assets/teams/psychos.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Psychos_logo.png?bb193f",
+      "bonuses": {
+        "2": "Psycho critical hits have a 25% chance to drop a pack containing 13 rage points.",
+        "3": "With 3 different Psychos on the field, a rage pack from their critical-hit bonus gives permanent Fury to a random ally.",
+        "5": "Enemies killed by your units or attacks have a 10% chance to drop 20 rage points."
+      }
+    },
+    "police": {
+      "name": "Police",
+      "source": "https://deadahead.wiki.gg/wiki/Police_(Team)",
+      "image": "assets/teams/police.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Police_logo.png?10672b",
+      "bonuses": {
+        "2": "Ranged units receive one extra base magazine of ammunition, up to 60 shots.",
+        "3": "Once 3 different Police units are on the field, the third and subsequently deployed Police units receive a shield worth 25% of their maximum health.",
+        "5": "When a Police unit dies, Police allies already on the field receive Fury for 10 seconds."
+      }
+    },
+    "marines": {
+      "name": "Marines",
+      "source": "https://deadahead.wiki.gg/wiki/Marines_(Team)",
+      "image": "assets/teams/marines.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Marines_logo.png?be38a1",
+      "bonuses": {
+        "2": "Private Rodriguez's main Marine appearance gains 100 agility and aggression, removing pauses between attacks.",
+        "3": "With 3 different Marines on the field, newly deployed ranged Marines receive 100 agility.",
+        "5": "All Marines receive 100 aggression, removing pauses between their attacks."
+      }
+    },
+    "rednecks": {
+      "name": "Rednecks",
+      "source": "https://deadahead.wiki.gg/wiki/Rednecks_(Team)",
+      "image": "assets/teams/rednecks.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Rednecks_logo.png?e180bd",
+      "bonuses": {
+        "2": "Each time a Redneck takes damage, there is a 5% chance to drop 25 courage points.",
+        "3": "With 3 different Rednecks on the field, spawning a courage pack fully heals one random allied unit.",
+        "5": "Each Redneck death has a 25% chance to drop 25 courage points."
+      }
+    },
+    "scientists": {
+      "name": "Scientists",
+      "source": "https://deadahead.wiki.gg/wiki/Scientists_(Team)",
+      "image": "assets/teams/scientists.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Scientists_logo.png?f22f14",
+      "bonuses": {
+        "2": "Explosion damage from your units and support items is doubled.",
+        "3": "With 3 different Scientists on the field, a dying Scientist summons a Drone to attack their killer. Equip a Drone to use its upgraded level.",
+        "5": "Each enemy killed makes Scientists deal 10% more damage to that enemy type. Stacks up to 100 kills and resets between waves or PvP battles."
+      }
+    },
+    "prisoners": {
+      "name": "Prisoners",
+      "source": "https://deadahead.wiki.gg/wiki/Prisoners_(Team)",
+      "image": "assets/teams/prisoners.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Prisoners_logo.png?a61d46",
+      "bonuses": {
+        "2": "Prisoners gain 50% melee damage resistance when deployed. The bonus is lost on death, even if the unit is revived.",
+        "3": "With 3 different Prisoners on the field, Prisoners have a 50% chance to avoid each enemy's first attack. Status effects can still be applied.",
+        "5": "Prisoners deal 10% more damage for each different negative status effect on their target. Fear does not count."
+      }
+    },
+    "southerners": {
+      "name": "Southerners",
+      "source": "https://deadahead.wiki.gg/wiki/Southerners_(Team)",
+      "image": "assets/teams/southerners.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Southerners_logo.png?c700da",
+      "bonuses": {
+        "2": "The frontmost allied human unit gains a shield worth 30% of its maximum health. The shield is lost if another unit moves ahead.",
+        "3": "With 3 different Southerners on the field, a Southerner's death heals all allies for 20% of that unit's maximum health.",
+        "5": "Newly deployed Southerners gain 5% damage, plus 10% per 30 courage points available at deployment."
+      }
+    },
+    "delivery": {
+      "name": "Delivery",
+      "source": "https://deadahead.wiki.gg/wiki/Delivery_(Team)",
+      "image": "assets/teams/delivery.png",
+      "sourceImage": "http://deadahead.wiki.gg/images/Delivery_logo.png?ccc543",
+      "bonuses": {
+        "2": "Delivery units have a 25% chance to avoid damage. An avoided attack may still apply status effects.",
+        "3": "With 3 different Delivery units on the field, Delivery units attacking the same target gain 6% damage per participating Delivery unit.",
+        "5": "After avoiding damage, Delivery units have a 50% chance to double the damage of their next attack."
+      }
+    }
+  },
+  "units": {
+    "Agents": {
+      "Agents": "police",
+      "Gearheads": "mechanic",
+      "Twins": "prisoners"
+    },
+    "Andrea": {
+      "Andrea": "northerners",
+      "Master Andrea": "college"
+    },
+    "Austin": {
+      "Austin": "psychos",
+      "Collector": "police"
+    },
+    "Berserker": {
+      "Berserker": "psychos",
+      "Climber": "emergency"
+    },
+    "Builder": {
+      "1998": "college",
+      "Builder": "builders",
+      "Rookie": "police"
+    },
+    "Builder Abby": {
+      "Builder Abby": "builders",
+      "Abby": "mechanic",
+      "Inspector Abby": "jailers",
+      "Most Wanted": "prisoners"
+    },
+    "Cap": {
+      "Cap": "tmf",
+      "Coach": "college",
+      "Commander": "marines"
+    },
+    "Carlos": {
+      "Carlos": "southerners",
+      "Wild Carlos": "rednecks",
+      "Wrench": "mechanic",
+      "Beetle": "psychos"
+    },
+    "Carol": {
+      "Carol": "military",
+      "Carol Flannel": "northerners",
+      "Carol Williams": "patriots",
+      "Carolina Ortiz": "prisoners",
+      "Thursday": "psychos"
+    },
+    "Cashier": {
+      "Cashier": "delivery",
+      "Christmas Cashier": null,
+      "First Baseman": "college"
+    },
+    "Chopper": {
+      "Chopper": "northerners",
+      "Clown Chopper": "psychos",
+      "Rural Chopper": "rednecks",
+      "Mountie": "police",
+      "Courier": "delivery"
+    },
+    "Demolitionist": {
+      "Demolitionist": "marines"
+    },
+    "Dr. Kane": {
+      "Dr. Kane": "scientists"
+    },
+    "Dr. Miller": {
+      "Dr. Miller": "scientists",
+      "Engineer Miller": "military",
+      "CBRN Miller": "marines"
+    },
+    "Dr. Norman": {
+      "Dr. Norman": "scientists",
+      "Jake": "emergency"
+    },
+    "Farmer": {
+      "Farmer": "rednecks",
+      "Redstreak": "patriots",
+      "Dale": "college",
+      "Workman": "builders"
+    },
+    "Firefighter": {
+      "Firefighter": "emergency",
+      "Dusty": "rednecks",
+      "Freedom Fighter": "patriots"
+    },
+    "Flamethrower": {
+      "Flamethrower": "tmf",
+      "Montag": "patriots"
+    },
+    "Glenn": {
+      "Glenn": "delivery",
+      "Glenn Woods": "military",
+      "Patrolman Glenn": "police",
+      "Glenn Pines": "northerners"
+    },
+    "Grenadier": {
+      "Grenadier": "if",
+      "Modern Grenadier": "military",
+      "Autopsy Tech": "scientists"
+    },
+    "Guard": {
+      "Guard": "jailers",
+      "Scout": "marines",
+      "Offensive Guard": "college",
+      "TMF Guard": "tmf"
+    },
+    "Gunslinger": {
+      "Gunslinger": "jailers",
+      "Rebel": "patriots",
+      "Bully": "college",
+      "Tack": "police"
+    },
+    "Haruko": {
+      "Haruko": "delivery"
+    },
+    "Hero": {
+      "Hero": "delivery",
+      "Researcher": "scientists"
+    },
+    "Jailer": {
+      "Jailer": "jailers",
+      "Prisoner": "prisoners",
+      "Enforcer": "if"
+    },
+    "Juggernaut": {
+      "Juggernaut": "patriots",
+      "Bombardier": "military",
+      "Bulldozer": "builders",
+      "Court Jester": "psychos"
+    },
+    "Lester": {
+      "Lester": "northerners",
+      "Transporter Lester": "jailers"
+    },
+    "Light Soldier": {
+      "Light Soldier": "if",
+      "Handyman": "builders",
+      "Liquidator": "scientists"
+    },
+    "Lionheart": {
+      "Lionheart": "emergency",
+      "Arsonist": "patriots",
+      "Rancher": "rednecks"
+    },
+    "Maria": {
+      "Maria": "prisoners",
+      "Marebecca": "psychos",
+      "Maria Alvarez": "southerners"
+    },
+    "Mechanic": {
+      "Mechanic": "mechanic",
+      "Christmas Mechanic": null,
+      "Operator": "builders"
+    },
+    "Medic": {
+      "Medic": "emergency",
+      "Surgeon Lt": "if",
+      "Nurse Hirsch": "northerners",
+      "Dr. Hirsch": "scientists"
+    },
+    "Paramedic Nancy": {
+      "Paramedic Nancy": "emergency",
+      "Nancy": "marines",
+      "Nurse Nancy": "rednecks",
+      "Prison Nurse": "jailers"
+    },
+    "Pepper": {
+      "Pepper": "if",
+      "Officer Pepper": "police",
+      "Carpenter Pepper": "builders",
+      "Dr. Pepper": "scientists",
+      "Sergeant Peppertine": "military"
+    },
+    "Policeman Diaz": {
+      "Policeman Diaz": "police",
+      "Desperado": "southerners",
+      "Mechanic Diaz": "mechanic"
+    },
+    "Private Rodriguez": {
+      "Private Rodriguez": "marines",
+      "Rodriguez": "patriots",
+      "El Rodriguez": "southerners"
+    },
+    "Queen": {
+      "Queen": "psychos",
+      "Liberty Queen": "patriots",
+      "Queen de la Muerte": "southerners"
+    },
+    "Ranger": {
+      "Ranger": "if",
+      "Tactical Ranger": "marines",
+      "TMF Ranger": "tmf",
+      "Army Ranger": "military",
+      "Lifeguard": "emergency"
+    },
+    "Red Hood": {
+      "Red Hood": "psychos",
+      "Machete": "southerners",
+      "Road Builder": "builders"
+    },
+    "Redneck": {
+      "Redneck": "rednecks",
+      "Hillbilly": "mechanic",
+      "Waterboy": "college",
+      "Worthy": "northerners"
+    },
+    "Rogue": {
+      "Rogue": "tmf",
+      "Riot Policeman": "police"
+    },
+    "Sarah": {
+      "Sarah": "prisoners"
+    },
+    "Saw": {
+      "Saw": "psychos",
+      "Dr. Sanchez": "scientists"
+    },
+    "Sheriff Charlotte": {
+      "Sheriff Charlotte": "police",
+      "Charlotte": "patriots",
+      "Bunny Charlotte": "psychos",
+      "Charlee": "rednecks",
+      "Charlotte Fortune": "southerners"
+    },
+    "Sniper Polina": {
+      "Sniper Polina": "jailers",
+      "Polina": "military",
+      "Navy Polina": "marines",
+      "Nomad Polina": "mechanic",
+      "Recon Polina": "if"
+    },
+    "Soldier": {
+      "Soldier": "tmf",
+      "Technician Bosco": "emergency",
+      "Bastion": "if",
+      "Linebacker": "college"
+    },
+    "Sonya": {
+      "Sonya": "marines",
+      "Winter Sonya": "northerners",
+      "Cheerleader": "college",
+      "Sonya Parker": "prisoners"
+    },
+    "SpecOps": {
+      "SpecOps": "military",
+      "Pilot": "marines"
+    },
+    "Swat": {
+      "Swat": "tmf",
+      "Swat Foreman": "builders",
+      "Firestarter": "emergency",
+      "Cleaner": "if"
+    },
+    "Turbo": {
+      "Turbo": "northerners",
+      "Turbo Batter": "college"
+    },
+    "Welder": {
+      "Welder": "mechanic",
+      "Christmas Welder": null,
+      "Construction Welder": "builders"
+    },
+    "Willy": {
+      "Willy": "jailers",
+      "Dr. Lilly": "scientists",
+      "TMF Willy": "tmf"
+    }
+  }
+}

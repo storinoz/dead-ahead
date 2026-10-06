@@ -1,0 +1,92 @@
+{
+  "emergency": {
+    "2": "All allied units gain 15% maximum health.",
+    "3": "With 3 different Emergency units on the field, allies inside a Medkit's area deal 50% more melee and ranged damage. Explosions and afterburn are excluded.",
+    "5": "After 6 different Emergency unit instances receive healing, an extra Emergency unit from your deck joins the battle. Each instance counts once."
+  },
+  "northerners": {
+    "2": "After a Northerner kills an enemy, their next attack is a guaranteed critical hit.",
+    "3": "With 3 different Northerners on the field, newly deployed Northerners always land a critical hit with their first attack.",
+    "5": "Northerners gain 50 percentage points of critical damage."
+  },
+  "college": {
+    "2": "Each College unit gains 10% critical damage per 90 points of their own charisma.",
+    "3": "With 3 different College units on the field, College units gain 80% charisma.",
+    "5": "College kills summon a random College unit from your deck: initially after 3 kills with +7% damage. Each summon adds 3 required kills and another 7% damage."
+  },
+  "military": {
+    "2": "Military units below 10% health have a 30% chance to avoid incoming damage.",
+    "3": "After 3 different Military units reach the field, every 2 Military deaths can summon SpecOps with a 50% chance.",
+    "5": "Enemies ignore Military units until those units attempt an attack. Opposing Military units can still target them."
+  },
+  "patriots": {
+    "2": "Patriot attacks have a 15% chance to ignite enemies.",
+    "3": "With 3 different Patriots on the field, fire and afterburn damage from human units and support items is doubled.",
+    "5": "Burning enemies deal 10% less damage."
+  },
+  "tmf": {
+    "2": "TMF units have a 50% chance to avoid each instance of explosion damage.",
+    "3": "Deploying a third different TMF unit summons one extra random TMF unit from your deck. Activates once per battle.",
+    "5": "Deploying a TMF unit has a 50% chance to reduce a random deck unit's cost by 5, down to zero. Can trigger 10 times per battle."
+  },
+  "builders": {
+    "2": "Start with a Red Barrel and Nitrogen on the field. Skirmish and wave-based modes use two Red Barrels instead.",
+    "3": "Deploying a third different Builder summons one extra random Builder from your deck. Activates once per battle.",
+    "5": "Builders gain 5% damage per Empty Barrel or Red Barrel currently on the field."
+  },
+  "if": {
+    "2": "Enemies within a Medkit's area move 50% slower and take extra damage equal to its healing percentage.",
+    "3": "With 3 different IF units on the field, a Medkit appears at a random location every 20 seconds. Its level matches your equipped Medkit; otherwise it is level 0.",
+    "5": "Medkits last 50% longer, providing 12 healing pulses instead of 8."
+  },
+  "mechanic": {
+    "2": "Each deployed Mechanic repairs the bus by 5% of its maximum health.",
+    "3": "With 3 different Mechanics on the field, deploying a Mechanic has a 25% chance to create a Turret; Welder has a 50% chance. Equip a Turret to use its upgraded level.",
+    "5": "Turrets take half as much self-damage from overheating."
+  },
+  "jailers": {
+    "2": "Support items require 30% less preparation time.",
+    "3": "With 3 different Jailers on the field, their critical hits have a 25% chance to stun enemies.",
+    "5": "All human units and support items require 30% less preparation time."
+  },
+  "psychos": {
+    "2": "Psycho critical hits have a 25% chance to drop a pack containing 13 rage points.",
+    "3": "With 3 different Psychos on the field, a rage pack from their critical-hit bonus gives permanent Fury to a random ally.",
+    "5": "Enemies killed by your units or attacks have a 10% chance to drop 20 rage points."
+  },
+  "police": {
+    "2": "Ranged units receive one extra base magazine of ammunition, up to 60 shots.",
+    "3": "Once 3 different Police units are on the field, the third and subsequently deployed Police units receive a shield worth 25% of their maximum health.",
+    "5": "When a Police unit dies, Police allies already on the field receive Fury for 10 seconds."
+  },
+  "marines": {
+    "2": "Private Rodriguez's main Marine appearance gains 100 agility and aggression, removing pauses between attacks.",
+    "3": "With 3 different Marines on the field, newly deployed ranged Marines receive 100 agility.",
+    "5": "All Marines receive 100 aggression, removing pauses between their attacks."
+  },
+  "rednecks": {
+    "2": "Each time a Redneck takes damage, there is a 5% chance to drop 25 courage points.",
+    "3": "With 3 different Rednecks on the field, spawning a courage pack fully heals one random allied unit.",
+    "5": "Each Redneck death has a 25% chance to drop 25 courage points."
+  },
+  "scientists": {
+    "2": "Explosion damage from your units and support items is doubled.",
+    "3": "With 3 different Scientists on the field, a dying Scientist summons a Drone to attack their killer. Equip a Drone to use its upgraded level.",
+    "5": "Each enemy killed makes Scientists deal 10% more damage to that enemy type. Stacks up to 100 kills and resets between waves or PvP battles."
+  },
+  "prisoners": {
+    "2": "Prisoners gain 50% melee damage resistance when deployed. The bonus is lost on death, even if the unit is revived.",
+    "3": "With 3 different Prisoners on the field, Prisoners have a 50% chance to avoid each enemy's first attack. Status effects can still be applied.",
+    "5": "Prisoners deal 10% more damage for each different negative status effect on their target. Fear does not count."
+  },
+  "southerners": {
+    "2": "The frontmost allied human unit gains a shield worth 30% of its maximum health. The shield is lost if another unit moves ahead.",
+    "3": "With 3 different Southerners on the field, a Southerner's death heals all allies for 20% of that unit's maximum health.",
+    "5": "Newly deployed Southerners gain 5% damage, plus 10% per 30 courage points available at deployment."
+  },
+  "delivery": {
+    "2": "Delivery units have a 25% chance to avoid damage. An avoided attack may still apply status effects.",
+    "3": "With 3 different Delivery units on the field, Delivery units attacking the same target gain 6% damage per participating Delivery unit.",
+    "5": "After avoiding damage, Delivery units have a 50% chance to double the damage of their next attack."
+  }
+}

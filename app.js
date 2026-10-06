@@ -3,6 +3,7 @@ const state = {
   itemAssets: null,
   unitAssets: null,
   unitProfiles: null,
+  teamAssets: null,
   characterIndex: 0,
   buildIndex: 0,
   skinIndex: 0,
@@ -21,8 +22,11 @@ const elements = {
   themeLabel: document.querySelector("#themeLabel"),
   name: document.querySelector("#characterName"),
   image: document.querySelector("#characterImage"),
-  portraitIndex: document.querySelector("#portraitIndex"),
   skinSelector: document.querySelector("#skinSelector"),
+  teamBadge: document.querySelector("#teamBadge"),
+  teamIcon: document.querySelector("#teamIcon"),
+  noTeamIcon: document.querySelector("#noTeamIcon"),
+  teamTooltip: document.querySelector("#teamTooltip"),
   classIcon: document.querySelector("#classIcon"),
   className: document.querySelector("#className"),
   perkList: document.querySelector("#perkList"),
@@ -102,6 +106,63 @@ function getShortPerkDescription(info) {
   return firstSentence || info || "Innate unit advantage.";
 }
 
+function hideTeamTooltip() {
+  clearTimeout(showTeamTooltip.hideTimer);
+  elements.teamTooltip.hidden = true;
+}
+
+function showTeamTooltip() {
+  clearTimeout(showTeamTooltip.hideTimer);
+  const tooltip = elements.teamTooltip;
+  tooltip.hidden = false;
+  const anchor = elements.teamBadge.getBoundingClientRect();
+  const bounds = tooltip.getBoundingClientRect();
+  const margin = 14;
+  const left = Math.max(margin, Math.min(anchor.left, window.innerWidth - bounds.width - margin));
+  const above = anchor.top - bounds.height - 12;
+  const below = anchor.bottom + 12;
+  const top = above >= margin ? above : Math.min(below, window.innerHeight - bounds.height - margin);
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${Math.max(margin, top)}px`;
+}
+
+function scheduleTeamTooltipHide() {
+  showTeamTooltip.hideTimer = setTimeout(hideTeamTooltip, 120);
+}
+
+function renderTeam(character, skin) {
+  hideTeamTooltip();
+  const teamKey = state.teamAssets.units[character.name]?.[skin.name];
+  const team = teamKey ? state.teamAssets.teams[teamKey] : null;
+  elements.teamIcon.hidden = !team;
+  elements.noTeamIcon.hidden = Boolean(team);
+  elements.teamBadge.setAttribute("aria-label", team ? `${team.name} team powers` : "No team affiliation");
+  elements.teamTooltip.replaceChildren();
+  const heading = document.createElement("strong");
+  heading.className = "team-tooltip-title";
+  heading.textContent = team ? team.name : "No team";
+  elements.teamTooltip.append(heading);
+  if (!team) {
+    const message = document.createElement("p");
+    message.textContent = "This skin does not belong to a Team and does not activate Team powers.";
+    elements.teamTooltip.append(message);
+    return;
+  }
+  elements.teamIcon.src = team.image;
+  elements.teamIcon.alt = `${team.name} emblem`;
+  const bonuses = document.createElement("dl");
+  for (const tier of [2, 3, 5]) {
+    const row = document.createElement("div");
+    const label = document.createElement("dt");
+    const description = document.createElement("dd");
+    label.textContent = `${tier} units`;
+    description.textContent = team.bonuses[tier];
+    row.append(label, description);
+    bonuses.append(row);
+  }
+  elements.teamTooltip.append(bonuses);
+}
+
 function buildCharacterControls() {
   elements.characterSelect.innerHTML = state.data.characters
     .map((character, index) => `<option value="${index}">${character.name}</option>`)
@@ -143,6 +204,7 @@ function renderCharacterHero(character) {
   elements.image.src = skin.image;
   elements.image.alt = `${skin.name} sprite`;
   elements.name.textContent = skin.name;
+  renderTeam(character, skin);
 
   elements.skinSelector.innerHTML = skins.map((option, index) => `
     <button class="skin-button${index === state.skinIndex ? " active" : ""}" type="button" data-skin-index="${index}" aria-label="Use ${option.name} skin" title="${option.name}" aria-pressed="${index === state.skinIndex}">
@@ -189,7 +251,6 @@ function selectCharacter(index, requestedBuild = 0, focusHeading = false, reques
   state.skinIndex = Math.max(0, Math.min(requestedSkin, skins.length - 1));
   renderCharacterHero(character);
   renderUnitProfile(character);
-  elements.portraitIndex.textContent = String(state.characterIndex + 1).padStart(2, "0");
   elements.characterSelect.value = String(state.characterIndex);
   elements.buildSelect.innerHTML = character.builds.map((build, buildIndex) =>
     `<option value="${buildIndex}">${build.label} — ${build.set}</option>`
@@ -252,6 +313,21 @@ function renderSources() {
 }
 
 function connectEvents() {
+  elements.teamBadge.addEventListener("mouseenter", showTeamTooltip);
+  elements.teamBadge.addEventListener("mouseleave", scheduleTeamTooltipHide);
+  elements.teamBadge.addEventListener("focus", showTeamTooltip);
+  elements.teamBadge.addEventListener("blur", hideTeamTooltip);
+  elements.teamBadge.addEventListener("click", showTeamTooltip);
+  elements.teamTooltip.addEventListener("mouseenter", () => clearTimeout(showTeamTooltip.hideTimer));
+  elements.teamTooltip.addEventListener("mouseleave", scheduleTeamTooltipHide);
+  window.addEventListener("resize", hideTeamTooltip);
+  window.addEventListener("scroll", hideTeamTooltip, { passive: true });
+  document.addEventListener("pointerdown", (event) => {
+    if (!elements.teamBadge.contains(event.target) && !elements.teamTooltip.contains(event.target)) hideTeamTooltip();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") hideTeamTooltip();
+  });
   elements.themeToggle.addEventListener("click", () => {
     applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
   });
@@ -281,21 +357,17 @@ function connectEvents() {
 
 async function init() {
   try {
-    const [dataResponse, itemAssetsResponse, unitAssetsResponse, unitProfilesResponse] = await Promise.all([
-      fetch("data/personagens.json?v=7"),
-      fetch("data/item-assets.json?v=7"),
-      fetch("data/unit-assets.json?v=7"),
-      fetch("data/unit-profiles.json?v=7"),
+    const responses = await Promise.all([
+      fetch("data/personagens.json?v=8"),
+      fetch("data/item-assets.json?v=8"),
+      fetch("data/unit-assets.json?v=8"),
+      fetch("data/unit-profiles.json?v=8"),
+      fetch("data/team-assets.json?v=8"),
     ]);
-    if (!dataResponse.ok || !itemAssetsResponse.ok || !unitAssetsResponse.ok || !unitProfilesResponse.ok) {
-      throw new Error(`HTTP failure ${dataResponse.status}/${itemAssetsResponse.status}/${unitAssetsResponse.status}/${unitProfilesResponse.status}`);
+    if (responses.some((response) => !response.ok)) {
+      throw new Error(`HTTP failure ${responses.map((response) => response.status).join("/")}`);
     }
-    [state.data, state.itemAssets, state.unitAssets, state.unitProfiles] = await Promise.all([
-      dataResponse.json(),
-      itemAssetsResponse.json(),
-      unitAssetsResponse.json(),
-      unitProfilesResponse.json(),
-    ]);
+    [state.data, state.itemAssets, state.unitAssets, state.unitProfiles, state.teamAssets] = await Promise.all(responses.map((response) => response.json()));
 
     applyTheme(document.documentElement.dataset.theme, false);
     buildCharacterControls();
