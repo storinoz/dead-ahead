@@ -208,8 +208,8 @@ kbd { padding: 1px 6px; border: 1px solid #3c4437; border-radius: 5px; backgroun
   pointer-events: none;
 }
 
-.profile-hero { display: grid; grid-template-columns: minmax(130px, 28%) minmax(0, 1fr); align-items: center; }
-.portrait-stage { position: relative; align-self: stretch; min-height: 252px; display: grid; place-items: center; overflow: hidden; padding-left: 58px; }
+.profile-hero { display: grid; grid-template-columns: minmax(160px, 34%) minmax(0, 1fr); align-items: center; }
+.portrait-stage { position: relative; align-self: stretch; min-height: 252px; display: grid; place-items: center; overflow: hidden; padding: 0 10px 0 94px; }
 .portrait-stage::after { content: ""; position: absolute; inset: auto 7% 0; height: 32px; border-radius: 50%; background: rgba(0, 0, 0, 0.42); filter: blur(12px); }
 .portrait-halo { position: absolute; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(215, 166, 56, 0.2), rgba(136, 153, 85, 0.05) 52%, transparent 70%); }
 .portrait-stage > img { position: relative; z-index: 2; width: min(100%, 160px); height: 220px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.35)); transition: opacity 150ms ease, transform 250ms ease; }
@@ -220,11 +220,12 @@ kbd { padding: 1px 6px; border: 1px solid #3c4437; border-radius: 5px; backgroun
 .skin-button.active { border-color: var(--accent); background: rgba(215, 166, 56, 0.16); box-shadow: 0 0 0 2px rgba(215, 166, 56, 0.1); }
 .skin-button img { max-width: 38px; max-height: 38px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.35)); }
 
-.profile-copy { position: relative; z-index: 2; min-width: 0; padding: 26px 20px 22px 10px; }
+.profile-copy { position: relative; z-index: 2; min-width: 0; padding: 16px 20px 16px 18px; }
 .profile-copy h1 { max-width: 720px; margin: 5px 0 8px; font-size: clamp(45px, 6vw, 76px); line-height: 0.92; letter-spacing: -0.01em; text-wrap: balance; overflow-wrap: anywhere; }
 .profile-controls { position: relative; z-index: 2; min-width: 0; padding: 0 22px 22px; }
 .profile-intro { max-width: 590px; margin: 18px 0 25px; color: var(--muted); }
-.unit-traits { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.unit-traits { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 18px 0 0; }
+.unit-affiliation { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
 .team-badge { flex: 0 0 54px; width: 54px; height: 54px; display: grid; place-items: center; padding: 5px; border: 1px solid #5d512f; border-radius: 12px; background: rgba(215, 166, 56, 0.08); cursor: help; }
 .team-badge:hover { border-color: var(--accent); }
 .team-badge img { width: 42px; height: 42px; object-fit: contain; image-rendering: pixelated; }
@@ -422,7 +423,7 @@ html[data-theme="light"] .toast { border-color: #a37d2b; background: #fff3ce; co
   .mobile-picker { width: min(1440px, 100%); display: grid; gap: 6px; margin: 0 auto 16px; }
   .mobile-picker select { width: 100%; }
   .overview-layout { grid-template-columns: 1fr; }
-  .profile-hero { grid-template-columns: minmax(170px, 28%) minmax(0, 1fr); }
+  .profile-hero { grid-template-columns: minmax(190px, 34%) minmax(0, 1fr); }
   .guidance-column { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 }
 

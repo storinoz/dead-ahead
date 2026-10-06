@@ -41,6 +41,7 @@ Este repositório contém o site estático publicado no GitHub Pages a partir da
 14. Preserve os modos claro e escuro, a preferência salva pelo navegador e os balões explicativos das vantagens.
 15. O emblema do Team deve acompanhar a skin selecionada. Skins sem Team devem informar a ausência de afiliação, sem atribuir bônus.
 16. Bônus dos Teams devem distinguir requisitos do deck e condições no campo de batalha; confira as páginas individuais dos Teams antes de alterar as descrições.
+17. No perfil, reserve espaço entre skins e sprite; agrupe nome, Team/classe e habilidades em três linhas, sem mover os controles de skins ou de Build / set.
 
 ## Publicação
 

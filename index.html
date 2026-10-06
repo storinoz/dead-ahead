@@ -18,7 +18,7 @@
         document.documentElement.dataset.theme = "dark";
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles.css?v=10">
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -80,13 +80,15 @@
             <div class="profile-copy">
               <h1 id="characterName"></h1>
               <div class="unit-traits">
-                <button class="team-badge" id="teamBadge" type="button" aria-label="Team powers" aria-describedby="teamTooltip">
-                  <img id="teamIcon" src="" alt="" width="42" height="42">
-                  <span class="no-team-icon" id="noTeamIcon" aria-hidden="true" hidden>—</span>
-                </button>
-                <div class="class-badge">
-                  <img id="classIcon" src="" alt="" width="42" height="42">
-                  <span><small>Class</small><strong id="className"></strong></span>
+                <div class="unit-affiliation">
+                  <button class="team-badge" id="teamBadge" type="button" aria-label="Team powers" aria-describedby="teamTooltip">
+                    <img id="teamIcon" src="" alt="" width="42" height="42">
+                    <span class="no-team-icon" id="noTeamIcon" aria-hidden="true" hidden>—</span>
+                  </button>
+                  <div class="class-badge">
+                    <img id="classIcon" src="" alt="" width="42" height="42">
+                    <span><small>Class</small><strong id="className"></strong></span>
+                  </div>
                 </div>
                 <div class="perk-list" id="perkList" aria-label="Unit perks"></div>
               </div>
