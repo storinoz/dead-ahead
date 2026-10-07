@@ -33,7 +33,7 @@ Este repositório contém o site estático publicado no GitHub Pages a partir da
 6. O site deve continuar funcionando como conteúdo estático no GitHub Pages.
 7. Teste layouts de computador e celular antes de publicar.
 8. Ao adicionar um conjunto, inclua Cup, Knife, Watch e Book em `data/item-assets.json` e `assets/items`.
-9. Em telas grandes, mantenha o perfil compacto na metade esquerda e About this unit / How to use this build na metade direita. Abaixo, itens em grade 2×2 na ordem Cup, Watch, Knife e Book; critérios em largura total e navegação na sequência. Em celular, empilhe os blocos para preservar a legibilidade.
+9. Em telas grandes, mantenha o perfil à esquerda com dois terços da largura e About this unit / How to use this build à direita com o terço restante. Abaixo, itens em grade 2×2 na ordem Cup, Watch, Knife e Book; critérios em largura total e navegação na sequência. Em celular, empilhe os blocos para preservar a legibilidade.
 10. A lista lateral deve usar somente a aparência principal; skins são selecionadas apenas no painel do personagem.
 11. Não use imagens geradas por IA para personagens ou skins.
 12. A interface e todo conteúdo exibido pelo site devem permanecer em inglês.
