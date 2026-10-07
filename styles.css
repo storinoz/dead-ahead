@@ -176,7 +176,7 @@ kbd { padding: 1px 6px; border: 1px solid #3c4437; border-radius: 5px; backgroun
 
 .content { min-width: 0; padding: 12px clamp(20px, 2vw, 36px) 70px; }
 .app-content { width: min(1440px, 100%); margin: 0 auto; }
-.overview-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 18px; align-items: stretch; }
+.overview-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 18px; align-items: stretch; }
 .mobile-picker { display: none; }
 
 .loading-state, .error-state { min-height: 55vh; display: grid; place-content: center; justify-items: center; color: var(--muted); text-align: center; }
