@@ -221,7 +221,7 @@ kbd { padding: 1px 6px; border: 1px solid #3c4437; border-radius: 5px; backgroun
 .skin-button img { max-width: 38px; max-height: 38px; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.35)); }
 
 .profile-copy { position: relative; z-index: 2; min-width: 0; padding: 16px 20px 16px 18px; }
-.profile-copy h1 { max-width: 720px; margin: 5px 0 8px; font-size: clamp(45px, 6vw, 76px); line-height: 0.92; letter-spacing: -0.01em; text-wrap: balance; overflow-wrap: anywhere; }
+.profile-copy h1 { max-width: 720px; margin: 5px 0 8px; font-size: calc(clamp(45px, 6vw, 76px) - 2px); line-height: 0.92; letter-spacing: -0.01em; text-wrap: balance; overflow-wrap: anywhere; }
 .profile-controls { position: relative; z-index: 2; min-width: 0; padding: 0 22px 22px; }
 .profile-intro { max-width: 590px; margin: 18px 0 25px; color: var(--muted); }
 .unit-traits { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 18px 0 0; }
@@ -453,7 +453,7 @@ html[data-theme="light"] .toast { border-color: #a37d2b; background: #fff3ce; co
   .skin-button img { max-width: 33px; max-height: 33px; }
   .profile-copy { padding: 12px 20px 22px; }
   .profile-controls { padding: 0 20px 22px; }
-  .profile-copy h1 { font-size: clamp(44px, 15vw, 64px); }
+  .profile-copy h1 { font-size: calc(clamp(44px, 15vw, 64px) - 2px); }
   .profile-intro { margin: 14px 0 20px; }
   .unit-traits { align-items: flex-start; margin: 15px 0 0; }
   .guidance-column { grid-template-columns: 1fr; }
